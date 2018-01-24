@@ -1,12 +1,12 @@
 var os = require('os');
 
 process.stdin.setEncoding('utf-8');
-process.stdin.on('readable', function() {
+process.stdin.on('readable', function () {
     var input = process.stdin.read();
-    if(input !== null) {
+    if (input !== null) {
         var instruction = input.trim();
         var OSinfo = require('../modules/OSinfo');
-        switch(instruction) {
+        switch (instruction) {
             case '/exit':
                 process.stdout.write('Quitting app!\n');
                 process.exit();
@@ -25,4 +25,3 @@ process.stdin.on('readable', function() {
 
 
 var OSinfo = require('../modules/OSinfo');
-
